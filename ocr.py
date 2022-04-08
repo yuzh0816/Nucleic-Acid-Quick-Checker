@@ -12,11 +12,10 @@ res=[]
 ocr = PaddleOCR(enable_mkldnn=True,use_angle_cls=False, use_gpu=True,use_tensorrt=True,
                 lang="ch")  # need to run only once to download and load model into memory
 
+#图片存储所在目录(本py文件所在文件夹)
+img_path = '***Location***'
 
-img_path = 'C:/Users/Yu Zhehao/Desktop/a/'
-
-# 保存不同模型的目录名(绝对路径)
-file_dir = r'C:/Users/Yu Zhehao/Desktop/a/'
+file_dir = r'***Location***'#同上，为同一个目录
 for root,dirs,files in os.walk(file_dir):
     for file in files:
         img_path=file_dir+file
